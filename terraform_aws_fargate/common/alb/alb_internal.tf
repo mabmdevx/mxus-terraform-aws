@@ -1,0 +1,22 @@
+resource "aws_lb" "xyz_alb_int" {
+  name               = "xyz-alb-int"
+  internal           = true
+  load_balancer_type = "application"
+  security_groups    = ["xyz-sg"]
+  subnets            = ["subnet-xyz-id"]
+
+  enable_deletion_protection = true
+
+  access_logs {
+    bucket  = "xyz-bucket-logs"
+    prefix  = "alb_int"
+    enabled = true
+  }
+
+  tags = {
+    Name = "xyz-alb-int"
+    Environment = "common"
+    Project_Name = var.tag_project_name
+    Application_Name = var.tag_application_name
+  }
+}

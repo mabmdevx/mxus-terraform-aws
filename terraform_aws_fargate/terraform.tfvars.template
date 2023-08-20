@@ -1,0 +1,52 @@
+## Common
+project_code = "xyz"
+project_name = "XYZ Project"
+application_name = "XYZ ABC Application"
+aws_account_id = "123456789"
+aws_vpc_id = "vpc-abc123"
+
+## ECR
+aws_ecr_force_delete_flag = true
+
+## RDS
+aws_rds_delete_protection_flag = true
+aws_rds_subnet_group_name = "sg-abc123"
+aws_rds_security_groups = "sg-pqr123"
+aws_rds_monitoring_role_arn = ""
+aws_rds_username_stg = "postgres"
+aws_rds_password_stg = "pqrpass"
+aws_rds_username_prd = "postgres"
+aws_rds_password_prd = "pqrpass"
+aws_rds_username_dev1 = "postgres"
+aws_rds_password_dev1 = "pqrpass"
+
+## ECS
+# Common
+aws_ecs_task_execution_role_arn = "arn:aws:iam::123456890:role/ecsTaskExecutionRole-xyz"
+
+# Stage
+aws_secrets_arn_stg = "arn:aws:secretsmanager:us-east-1:1234567890:secret:XYZ-STG-xyz123"
+aws_ecs_fg_cluster_arn_stg_api = "arn:aws:ecs:us-east-1:123456789:cluster/xyz-ecs-fg-cluster-stg-api"
+aws_ecs_fg_task_arn_stg_api = "arn:aws:ecs:us-east-1:123456789:task-definition/xyz-ecs-fg-task-stg-api"
+aws_tg_arn_api_stg = "arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/xyz-tg-ecs-fg-stg-api/abcde12345"
+aws_ecs_fg_cluster_arn_stg_ui = "arn:aws:ecs:us-east-1:123456789:cluster/xyz-ecs-fg-cluster-stg-ui"
+aws_ecs_fg_task_arn_stg_ui = "arn:aws:ecs:us-east-1:123456789:task-definition/xyz-ecs-fg-task-stg-ui"
+aws_tg_arn_stg_ui = "arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/xyz-tg-ecs-fg-stg-ui/abcde12345"
+
+# Prod
+aws_secrets_arn_prd = "arn:aws:secretsmanager:us-east-1:1234567890:secret:XYZ-PRD-xyz123"
+aws_ecs_fg_cluster_arn_prd_api = "arn:aws:ecs:us-east-1:123456789:cluster/xyz-ecs-fg-cluster-prd-api"
+aws_ecs_fg_task_arn_prd_api = "arn:aws:ecs:us-east-1:123456789:task-definition/xyz-ecs-fg-task-prd-api"
+aws_tg_arn_prd_api = "arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/xyz-tg-ecs-fg-prd-api/abcde12345"
+aws_ecs_fg_cluster_arn_prd_ui = "arn:aws:ecs:us-east-1:123456789:cluster/xyz-ecs-fg-cluster-prd-ui"
+aws_ecs_fg_task_arn_prd_ui = "arn:aws:ecs:us-east-1:123456789:task-definition/xyz-ecs-fg-task-prd-ui"
+aws_tg_arn_prd_ui = "arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/xyz-tg-ecs-fg-prd-ui/abcde12345"
+
+# Dev1
+aws_secrets_arn_dev1 = "arn:aws:secretsmanager:us-east-1:1234567890:secret:XYZ-dev1-xyz123"
+aws_ecs_fg_cluster_arn_dev1_api = "arn:aws:ecs:us-east-1:123456789:cluster/xyz-ecs-fg-cluster-dev1-api"
+aws_ecs_fg_task_arn_dev1_api = "arn:aws:ecs:us-east-1:123456789:task-definition/xyz-ecs-fg-task-dev1-api"
+aws_tg_arn_dev1_api = "arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/xyz-tg-ecs-fg-dev1-api/abcde12345"
+aws_ecs_fg_cluster_arn_dev1_ui = "arn:aws:ecs:us-east-1:123456789:cluster/xyz-ecs-fg-cluster-dev1-ui"
+aws_ecs_fg_task_arn_dev1_ui = "arn:aws:ecs:us-east-1:123456789:task-definition/xyz-ecs-fg-task-dev1-ui"
+aws_tg_arn_dev1_ui = "arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/xyz-tg-ecs-fg-dev1-ui/abcde12345"
